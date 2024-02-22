@@ -31,7 +31,7 @@ function getSteps() {
   return ['Step 1', 'Step 2', 'Step 3'];
 }
 
-function getStepContent(step: number, formData, setFormData) {
+function getStepContent(step: number, formData:any , setFormData:any) {
   console.log(step);
   switch (step) {
     case 0:
@@ -135,7 +135,7 @@ export default function StepperForm() {
 
 
   const handleSubmit = () => {
-    axios.post('http://localhost:5000/submit-form', formData)
+    axios.post('https://fixhealth-72pi.onrender.com/submit-form', formData)
     .then(response => {
       console.log(response.data);
       setDataa(response.data);
