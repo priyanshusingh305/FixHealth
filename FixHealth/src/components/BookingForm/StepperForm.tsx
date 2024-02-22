@@ -44,7 +44,6 @@ function getStepContent(step: number, formData, setFormData) {
             value={formData.name}
             onChange={(e) => setFormData({...formData, name: e.target.value})}
           />
-          
         <input className='w-full h-50 bg-white text-black focus:border-blue-500' placeholder="Phone Number" type="number" value={formData.phoneNumber}
         onChange={(e) => setFormData({...formData, phoneNumber: e.target.value})}
         />
@@ -77,13 +76,6 @@ function getStepContent(step: number, formData, setFormData) {
       return (
 
         <div className='text-black'>
-          <TextField
-            label="Chief complaints"
-            variant="outlined"
-            fullWidth
-            value={formData.name}
-            onChange={(e) => setFormData({...formData, name: e.target.value})}
-          />
           {formData.age>40 ?(<div>
           <label>Any previous experience with physiotherapy</label>
           <input 
